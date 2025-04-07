@@ -1,10 +1,16 @@
 import { defineConfig } from 'vitepress'
+import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Miko Docs",
   description: "A VitePress Site",
   lastUpdated: true,
+  markdown: {
+    config: (md) => {
+      tabsPlugin(md)
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -52,12 +58,25 @@ export default defineConfig({
             link: '/java'
           }
         ]
-      }
+      },
+      {
+        text: '支持作者',
+        items: [
+          {
+            text: 'Hiatus',
+            link: '/donation#hiatus'
+          },
+          {
+            text: '月信',
+            link: '/donation#月信'
+          }
+        ]
+      },
     ],
     lastUpdatedText: "最后更新",
     outlineTitle: "本页目录",
     editLink: {
-      pattern: "https://github.com/mapleleafsb/miko-docs/main/:path",
+      pattern: "https://github.com/mapleleafsb/miko-docs/blob/main/:path",
       text: "在 github 上编辑此页",
     },
     socialLinks: [

@@ -3,6 +3,8 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import { Tab, Tabs } from 'vue3-tabs-component'
+import '@red-asuka/vitepress-plugin-tabs/dist/style.css'
 
 export default {
   extends: DefaultTheme,
@@ -12,6 +14,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    app.component('Tab', Tab)
+    app.component('Tabs', Tabs)
   }
 } satisfies Theme
