@@ -13,7 +13,7 @@ export default defineConfig({
         link: '/'
       },
       {
-        text: '功能指男',
+        text: '功能直男',
         link: '/start'
       },
       {
