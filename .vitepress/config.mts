@@ -19,6 +19,10 @@ export default defineConfig({
       {
         text: '交流反馈',
         link: '/Feedback'
+      },
+      {
+        text: '开发指北',
+        link: '/java'
       }
     ],
 
